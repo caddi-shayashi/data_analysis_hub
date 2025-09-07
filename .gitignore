@@ -1,0 +1,56 @@
+# Configuration and Authentication
+config/auth/
+config/salesforce/
+config/**/*.json
+config/**/.env
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files (keep directory structure only)
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Output files
+output/*
+!output/.gitkeep
+
+# Environment files
+.env
+.env.local
+.env.salesforce
+
+# Mac
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+
+# UV
+uv.lock
