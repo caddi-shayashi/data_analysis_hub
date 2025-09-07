@@ -88,6 +88,12 @@ data_analysis_hub/
 - BigQueryへのアクセス権限
 - Gemini API キー（自然言語分析用）
 
+### クイックスタート（Google Colab）
+
+下記ボタンをクリックして、Google Colabで直接実行できます：
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/bigquery_nl_analysis_with_gemini.ipynb)
+
 ### インストール
 
 ```bash
@@ -119,6 +125,8 @@ uv run streamlit run app.py
 ## 📖 使用方法
 
 ### 1. 自然言語でのBigQuery分析
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/bigquery_nl_analysis_with_gemini.ipynb)
 
 ```python
 # notebooks/bigquery_nl_analysis_with_gemini.ipynb を開く
