@@ -58,7 +58,9 @@ CADDi製造業AIデータプラットフォームの経営戦略立案を支援�
 ```
 data_analysis_hub/
 ├── 📓 notebooks/              # 分析用Jupyterノートブック
-│   └── bigquery_nl_analysis_with_gemini.ipynb  # 自然言語分析
+│   ├── bigquery_nl_analysis_with_gemini.ipynb  # 自然言語分析（開発者向け）
+│   ├── sales_data_analyzer.ipynb  # 営業チーム専用版（非エンジニア向け）
+│   └── SALES_TEAM_GUIDE.md   # 営業チーム向け使い方ガイド
 ├── 📊 data/                   # データファイル
 │   ├── raw/                   # 生データ
 │   ├── processed/             # 加工済みデータ
@@ -126,7 +128,11 @@ uv run streamlit run app.py
 
 ### 1. 自然言語でのBigQuery分析
 
+#### 🔧 開発者・データアナリスト向け
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/bigquery_nl_analysis_with_gemini.ipynb)
+
+#### 👥 営業チーム向け（非エンジニア専用）
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/sales_data_analyzer.ipynb)
 
 ```python
 # notebooks/bigquery_nl_analysis_with_gemini.ipynb を開く
