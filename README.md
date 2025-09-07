@@ -131,8 +131,14 @@ uv run streamlit run app.py
 #### 🔧 開発者・データアナリスト向け
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/bigquery_nl_analysis_with_gemini.ipynb)
 
-#### 👥 営業チーム向け（非エンジニア専用）
+#### 👥 営業チーム向け（非エンジニア専用）v3.0 - インタラクティブ版
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/caddi-shayashi/data_analysis_hub/blob/master/notebooks/sales_data_analyzer.ipynb)
+
+**✨ 新機能:**
+- 📊 **完全なデータ構造表示** - 全テーブル・全カラムをインタラクティブに探索
+- 🎯 **カラム説明付き** - 各データ項目の意味とサンプル値を詳細表示
+- 💾 **多様な保存形式** - Excel、CSV、HTMLレポート、画像保存に対応
+- 🎮 **ワンクリック分析** - よく使う分析パターンをボタン1つで実行
 
 ```python
 # notebooks/bigquery_nl_analysis_with_gemini.ipynb を開く
