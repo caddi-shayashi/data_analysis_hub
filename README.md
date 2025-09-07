@@ -15,9 +15,9 @@ CADDi製造業AIデータプラットフォームの経営戦略立案を支援�
 - **統合KPI分析**: 各種KPIの統合的な可視化とトレンド分析
 
 ### 🤖 AI機能
-- **自然言語クエリ**: Gemini APIを使用した自然言語でのBigQueryデータ分析
-- **自動レポート生成**: 定期的な分析レポートの自動生成
-- **異常検知**: 機械学習による異常値・外れ値の自動検出
+- **自然言語クエリ**: Gemini 2.5 Pro/Flashを使用した自然言語でのBigQueryデータ分析
+- **自動SQL生成**: 日本語の質問から最適なSQLクエリを自動生成
+- **インサイト生成**: AIによる分析結果の要約とビジネスインサイト抽出
 
 ### 📈 可視化・ダッシュボード
 - **インタラクティブダッシュボード**: Streamlit/Dashによるリアルタイム分析
@@ -85,7 +85,7 @@ data_analysis_hub/
 ### 前提条件
 - Python 3.11以上
 - Google Cloud SDKのインストールと認証
-- BigQueryへのアクセス権限
+- BigQueryへのアクセス権限（esperanto-drawer-prod）
 - Gemini API キー（自然言語分析用）
 
 ### クイックスタート（Google Colab）
@@ -130,15 +130,25 @@ uv run streamlit run app.py
 
 ```python
 # notebooks/bigquery_nl_analysis_with_gemini.ipynb を開く
-analyzer = NLToBigQueryAnalyzer(project_id="caddi-ceo-office")
+analyzer = NLToBigQueryAnalyzer(project_id="esperanto-drawer-prod")
 result = analyzer.analyze("先月の売上上位10社を教えて")
 ```
 
+#### 主な特徴
+- **Gemini 2.5 Pro/Flash**: 最新AIモデルによる高精度な分析
+- **200万トークン対応**: 大規模データセットの一括分析が可能
+- **自動フォールバック**: Pro → Flash → 2.0 Flashの順で自動切り替え
+
 ### 2. BigQueryデータセット
 
-主要なデータセット:
-- `dm_business_planning.salesforce_account_mart` - 顧客マスタ
-- `dm_business_planning.salesforce_opportunity_mart` - 商談データ
+#### プロジェクト: esperanto-drawer-prod
+- **dm_business_planning**
+  - `salesforce_account_mart` - 顧客マスタ（企業情報、セグメント等）
+  - `salesforce_opportunity_mart` - 商談データ（案件、金額、ステージ等）
+
+#### Gemini API設定
+- **Colabシークレット**: `GEMINI_API_KEY`として登録（推奨）
+- **環境変数**: ローカル実行時は`.env`ファイルに設定
 
 ### 3. カスタムエージェント
 
@@ -206,4 +216,4 @@ CADDi内部プロジェクト - Proprietary
 
 ---
 
-*Last Updated: 2025-01-07*
+*Last Updated: 2025-01-09*
